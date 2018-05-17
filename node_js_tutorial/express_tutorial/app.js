@@ -29,6 +29,9 @@ app.get('/a', function(req,res){
 // add wiki module to app
 app.use('/wiki',wiki);
 
+// will serve static files from 'public'
+app.use(express.static('public'));
+
 app.listen(3000, function() {
   console.log('Example app listening on port 3000!');
 });
